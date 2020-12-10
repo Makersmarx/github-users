@@ -1,21 +1,12 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  height: 50vh;
+  /* background-color: tomato; */
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +15,93 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
+.info-item {
+  width: 15vw;
+  height: 10vh;
+  padding: 2em;
+  border: 2px solid;
+  align-self: center;
+  background-color: #282c34;
+  border-radius: 2em;
+}
+
+/* The animation code */
+@keyframes example {
   from {
-    transform: rotate(0deg);
+    background-color: red;
   }
   to {
-    transform: rotate(360deg);
+    background-color: yellow;
+  }
+}
+
+/* The element to apply the animation to */
+.info-item {
+  animation-name: example;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+/* Scrolling text section */
+.scroll-left {
+  font-size: 32px;
+  padding-top: 125px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  background-color: #282c34;
+  color: blueviolet;
+}
+.scroll-left p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  -moz-animation: scroll-left 10s linear infinite;
+  -webkit-animation: scroll-left 10s linear infinite;
+  animation: scroll-left 10s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes scroll-left {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes scroll-left {
+  0% {
+    -moz-transform: translateX(100%); /* Browser bug fix */
+    -webkit-transform: translateX(100%); /* Browser bug fix */
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%); /* Browser bug fix */
+    -webkit-transform: translateX(-100%); /* Browser bug fix */
+    transform: translateX(-100%);
   }
 }
