@@ -26,29 +26,29 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      <header className='App-header'>
         <h2>GitHub Recap</h2>
       </header>
-      <div className="user-container">
-        <h5 className="info-item">
+      <div className='user-container'>
+        <h5 className='info-item'>
           <h3>Username: </h3>
           {userData.name}
         </h5>
-        <h5 className="info-item">
+        <h5 className='info-item'>
           <h3>Location: </h3>
           {userData.location}
         </h5>
-        <h5 className="info-item">
+        <h5 className='info-item'>
           <h3>Public Repos: </h3>
           {userData.public_repos}
         </h5>
-        <h5 className="info-item">
+        <h5 className='info-item'>
           <h3>Public Gists: </h3>
           {userData.public_gists}
         </h5>
       </div>
-      <div className="scroll-left">
+      <div className='scroll-left'>
         <p>
           This is my GitHub Recap <strong>90's</strong> style, and Just a Silly
           Way to Play with Random CSS & React!
